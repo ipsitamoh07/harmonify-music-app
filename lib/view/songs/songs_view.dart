@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:harmonify1/common/colors.dart';
+import 'package:harmonify1/view/songs/allsongs_view.dart';
+import 'package:harmonify1/view/songs/playlist_view.dart';
 import 'package:harmonify1/view_model/splash_view_model.dart';
 
 class SongsView extends StatefulWidget {
@@ -109,12 +111,8 @@ class _SongsViewState extends State<SongsView>
               child: TabBarView(
             controller: controller,
             children: const [
-              Center(
-                child: Text("All Songs"),
-              ),
-              Center(
-                child: Text("Playlists"),
-              ),
+              AllSongsView(),
+              PlaylistsView(),
               Center(
                 child: Text("Albums"),
               ),
