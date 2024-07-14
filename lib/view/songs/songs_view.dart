@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:harmonify1/common/colors.dart';
+import 'package:harmonify1/view/songs/albums_view.dart';
 import 'package:harmonify1/view/songs/allsongs_view.dart';
+import 'package:harmonify1/view/songs/artists_view.dart';
+import 'package:harmonify1/view/songs/genres_view.dart';
 import 'package:harmonify1/view/songs/playlist_view.dart';
 import 'package:harmonify1/view_model/splash_view_model.dart';
 
@@ -113,15 +116,9 @@ class _SongsViewState extends State<SongsView>
             children: const [
               AllSongsView(),
               PlaylistsView(),
-              Center(
-                child: Text("Albums"),
-              ),
-              Center(
-                child: Text("Artists"),
-              ),
-              Center(
-                child: Text("Genres"),
-              ),
+              AlbumsView(),
+              ArtistsView(),
+              GenresView(),
 
               // AllSongsView(),
               // PlaylistsView(),

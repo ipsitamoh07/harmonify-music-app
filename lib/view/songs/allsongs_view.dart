@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonify1/common_widget/all_songs_row.dart';
-import 'package:harmonify1/view_model/songs_row.dart';
+import 'package:harmonify1/view/main_player/main_player.dart';
 import 'package:harmonify1/view_model/all_songs_view_model.dart';
 
 class AllSongsView extends StatefulWidget {
@@ -27,7 +27,9 @@ class _AllSongsViewState extends State<AllSongsView> {
             return AllSongRow(
               sObj: sObj,
               onPressed: () {},
-              onPressedPlay: () {},
+              onPressedPlay: () {
+                Get.to(() => const MainPlayerView());
+              },
             );
           })),
     );

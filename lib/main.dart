@@ -1,15 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:harmonify1/audio_helper/page_manager.dart';
+import 'package:harmonify1/audio_helper/service_locator.dart';
 import 'package:harmonify1/common/colors.dart';
 import 'package:harmonify1/view/splash_view.dart';
 
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setupServiceLocator();
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+@override
+  void initState() {
+    getIt<PageManager>().init();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    getIt<PageManager>().dispose();
+    super.dispose();
+  }
 
   // This widget is the root of your application.
   @override
