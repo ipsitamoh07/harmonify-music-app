@@ -142,10 +142,10 @@ class _HomeViewState extends State<HomeView> {
                 itemCount: homeVM.recentlyPlayedArr.length,
                 itemBuilder: (context, index) {
                   var sObj = homeVM.recentlyPlayedArr[index];
-                  return SongsRow(
+                  return AllSongRow(
                     sObj: sObj,
                     onPressedPlay: () {},
-                    onPressed: () {},
+                    onPressed: () {}, isWeb: true ,
                   );
                 }),
           ],

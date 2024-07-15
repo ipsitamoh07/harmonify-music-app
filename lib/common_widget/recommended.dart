@@ -35,7 +35,7 @@ class RecommendedCell extends StatelessWidget {
               ),
 
               Text(
-                mObj["artists"],
+                mObj["artist"],
                 maxLines: 1,
                 style: TextStyle(
                   color: TColor.secondaryText,

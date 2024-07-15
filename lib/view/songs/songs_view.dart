@@ -102,7 +102,7 @@ class _SongsViewState extends State<SongsView>
                   text: "Albums",
                 ),
                 Tab(
-                  text: "Artists",
+                  text: "Artist",
                 ),
                 Tab(
                   text: "Genres",
@@ -117,13 +117,13 @@ class _SongsViewState extends State<SongsView>
               AllSongsView(),
               PlaylistsView(),
               AlbumsView(),
-              ArtistsView(),
+              ArtistView(),
               GenresView(),
 
               // AllSongsView(),
               // PlaylistsView(),
               // AlbumsView(),
-              // ArtistsView(),
+              // artistView(),
               // GenresView(),
             ],
           ))

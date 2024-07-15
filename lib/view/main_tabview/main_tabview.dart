@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonify1/common/colors.dart';
 import 'package:harmonify1/common_widget/icon_text_row.dart';
+import 'package:harmonify1/common_widget/mini_player.dart';
 import 'package:harmonify1/view/settings/settings_view.dart';
 import 'package:harmonify1/view/songs/songs_view.dart';
 import 'package:harmonify1/view_model/splash_view_model.dart';
@@ -93,7 +94,7 @@ class _MainTabViewState extends State<MainTabView>
                           Column(
                             children: [
                               Text(
-                                "87\nArtists",
+                                "87\nartist",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Color(0xffC1C0C0), fontSize: 12),
@@ -150,12 +151,19 @@ class _MainTabViewState extends State<MainTabView>
               ),
             ],
           )),
-      body: TabBarView(
-        controller: controller,
-        children: const [
-          HomeView(),
-         SongsView(),  
-          SettingsView(),
+      body: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          TabBarView(
+            controller: controller,
+            children: const [
+              HomeView(),
+             SongsView(),  
+              SettingsView(),
+            ],
+          ),
+
+          MiniPlayerView(),
         ],
       ),
       bottomNavigationBar: Container(

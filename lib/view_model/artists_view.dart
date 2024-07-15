@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class ArtistsViewModel extends GetxController {
+class artistViewModel extends GetxController {
   final allList = [
     {
       "image": "assets/images/ar_1.png",
@@ -66,29 +66,29 @@ class ArtistsViewModel extends GetxController {
 
 
   final playedArr = [
-    {"duration": "3:56", "name": "Billie Jean", "artists": "Michael Jackson"},
-    {"duration": "3:56", "name": "Earth Song", "artists": "Michael Jackson"},
-    {"duration": "3:56", "name": "Mirror", "artists": "Justin Timberlake"},
+    {"duration": "3:56", "name": "Billie Jean", "artist": "Michael Jackson"},
+    {"duration": "3:56", "name": "Earth Song", "artist": "Michael Jackson"},
+    {"duration": "3:56", "name": "Mirror", "artist": "Justin Timberlake"},
     {
       "duration": "3:56",
       "name": "Remember the Time",
-      "artists": "Michael Jackson"
+      "artist": "Michael Jackson"
     },
-    {"duration": "3:56", "name": "Billie Jean", "artists": "Michael Jackson"},
-    {"duration": "3:56", "name": "Earth Song", "artists": "Michael Jackson"},
-    {"duration": "3:56", "name": "Mirror", "artists": "Justin Timberlake"},
+    {"duration": "3:56", "name": "Billie Jean", "artist": "Michael Jackson"},
+    {"duration": "3:56", "name": "Earth Song", "artist": "Michael Jackson"},
+    {"duration": "3:56", "name": "Mirror", "artist": "Justin Timberlake"},
     {
       "duration": "3:56",
       "name": "Remember the Time",
-      "artists": "Michael Jackson"
+      "artist": "Michael Jackson"
     },
-    {"duration": "3:56", "name": "Billie Jean", "artists": "Michael Jackson"},
-    {"duration": "3:56", "name": "Earth Song", "artists": "Michael Jackson"},
-    {"duration": "3:56", "name": "Mirror", "artists": "Justin Timberlake"},
+    {"duration": "3:56", "name": "Billie Jean", "artist": "Michael Jackson"},
+    {"duration": "3:56", "name": "Earth Song", "artist": "Michael Jackson"},
+    {"duration": "3:56", "name": "Mirror", "artist": "Justin Timberlake"},
     {
       "duration": "3:56",
       "name": "Remember the Time",
-      "artists": "Michael Jackson"
+      "artist": "Michael Jackson"
     }
   ].obs;
  

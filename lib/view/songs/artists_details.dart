@@ -17,7 +17,7 @@ class ArtistDetailsView extends StatefulWidget {
 }
 
 class _ArtistDetailsViewState extends State<ArtistDetailsView> {
-  final artVM = Get.put(ArtistsViewModel());
+  final artVM = Get.put(artistViewModel());
 
   @override
   Widget build(BuildContext context) {

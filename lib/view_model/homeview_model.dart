@@ -8,12 +8,12 @@ class HomeViewModel extends GetxController {
         {
             "image": "assets/images/img_1.png",
             "name": "Sound of Sky",
-            "artists": "Dilon Bruce"
+            "artist": "Dilon Bruce"
         },
         {
             "image": "assets/images/img_2.png",
             "name": "Girl on Fire",
-            "artists": "Alecia Keys"
+            "artist": "Alecia Keys"
         }
     ].obs;
 
@@ -21,17 +21,17 @@ class HomeViewModel extends GetxController {
         {
             "image": "assets/images/img_3.png",
             "name": "Classic Playlist",
-            "artists": "Piano Guys"
+            "artist": "Piano Guys"
         },
         {
             "image": "assets/images/img_4.png",
             "name": "Summer Playlist",
-            "artists": "Dilon Bruce"
+            "artist": "Dilon Bruce"
         },
         {
             "image": "assets/images/img_5.png",
             "name": "Pop Music",
-            "artists": "Michael Jackson"
+            "artist": "Michael Jackson"
         }
     ];
 
@@ -39,22 +39,22 @@ class HomeViewModel extends GetxController {
         {
             "rate": 4,
             "name": "Billie Jean",
-            "artists": "Michael Jackson"
+            "artist": "Michael Jackson"
         },
         {
             "rate": 4,
             "name": "Earth Song",
-            "artists": "Michael Jackson"
+            "artist": "Michael Jackson"
         },
         {
             "rate": 4,
             "name": "Mirror",
-            "artists": "Justin Timberlake"
+            "artist": "Justin Timberlake"
         },
         {
             "rate": 4,
             "name": "Remember the Time",
-            "artists": "Michael Jackson"
+            "artist": "Michael Jackson"
         }
     ].obs;
 }

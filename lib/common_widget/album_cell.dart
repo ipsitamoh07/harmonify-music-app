@@ -151,7 +151,7 @@ class AlbumCell extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  aObj["artists"],
+                  aObj["artist"],
                   maxLines: 1,
                   style: TextStyle(color: TColor.lightGray, fontSize: 11),
                 ),

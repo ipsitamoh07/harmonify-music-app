@@ -4,15 +4,15 @@ import 'package:harmonify1/common_widget/artist_row.dart';
 import 'package:harmonify1/view/songs/artists_details.dart';
 import 'package:harmonify1/view_model/artists_view.dart';
 
-class ArtistsView extends StatefulWidget {
-  const ArtistsView({super.key});
+class ArtistView extends StatefulWidget {
+  const ArtistView({super.key});
 
   @override
-  State<ArtistsView> createState() => _ArtistsViewState();
+  State<ArtistView> createState() => _ArtistViewState();
 }
 
-class _ArtistsViewState extends State<ArtistsView> {
-  final artVM = Get.put(ArtistsViewModel());
+class _ArtistViewState extends State<ArtistView> {
+  final artVM = Get.put(artistViewModel());
 
   @override
   Widget build(BuildContext context) {
