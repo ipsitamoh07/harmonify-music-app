@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonify1/common/colors.dart';
+import 'package:harmonify1/common_widget/all_songs_row.dart';
 import 'package:harmonify1/common_widget/playlist_cell.dart';
 import 'package:harmonify1/common_widget/recommended.dart';
 import 'package:harmonify1/common_widget/title_section.dart';
 import 'package:harmonify1/common_widget/view_all_section.dart';
 import 'package:harmonify1/view_model/homeview_model.dart';
-import 'package:harmonify1/view_model/songs_row.dart';
 import 'package:harmonify1/view_model/splash_view_model.dart';
-
-
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -27,57 +25,52 @@ class _HomeViewState extends State<HomeView> {
         backgroundColor: TColor.bg,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {
-            Get.find<SplashViewModel>().openDrawer();
-          },
-          icon: Image.asset(
-            "assets/images/menu.png",
-            width: 25,
-            height: 25,
-            fit: BoxFit.contain,
-          ),
-        ),
+            onPressed: () {
+              Get.find<SplashViewModel>().openDrawer();
+            },
+            icon: Image.asset(
+              "assets/images/menu.png",
+              width: 25,
+              height: 25,
+              fit: BoxFit.contain,
+            )),
         title: Row(
           children: [
             Expanded(
               child: Container(
                 height: 38,
                 decoration: BoxDecoration(
-                  color: Color(0xff292E4B),
+                  color: const Color(0xff292E4B),
                   borderRadius: BorderRadius.circular(19),
                 ),
                 child: TextField(
                   controller: homeVM.txtSearch.value,
                   decoration: InputDecoration(
-                    focusedBorder: InputBorder.none,
-                    enabledBorder: InputBorder.none,
-                    errorBorder: InputBorder.none,
-                    disabledBorder: InputBorder.none,
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 4,
-                      horizontal: 20,
-                    ),
-                    prefixIcon: Container(
-                      margin: const EdgeInsets.only(left: 20),
-                      alignment: Alignment.centerLeft,
-                      width: 20,
-                      child: Image.asset(
-                        "assets/images/search.png",
-                        width: 20,
-                        height: 20,
-                        fit: BoxFit.contain,
-                        color: TColor.primaryText28,
+                      focusedBorder: InputBorder.none,
+                      enabledBorder: InputBorder.none,
+                      errorBorder: InputBorder.none,
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 4, horizontal: 20),
+                      prefixIcon: Container(
+                        margin: const EdgeInsets.only(left: 20),
+                        alignment: Alignment.centerLeft,
+                        width: 30,
+                        child: Image.asset(
+                          "assets/images/search.png",
+                          width: 20,
+                          height: 20,
+                          fit: BoxFit.contain,
+                          color: TColor.primaryText28,
+                        ),
                       ),
-                    ),
-                    hintText: "Search Album Songs",
-                    hintStyle: TextStyle(
+                      hintText: "Search album song",
+                      hintStyle: TextStyle(
                         color: TColor.primaryText28,
                         fontSize: 13,
-                        wordSpacing: 2),
-                  ),
+                      )),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),
@@ -87,12 +80,10 @@ class _HomeViewState extends State<HomeView> {
           children: [
             const TitleSection(title: "Hot Recommended"),
             SizedBox(
-              height: 191,
+              height: 190,
               child: ListView.builder(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 10,
-                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 3, vertical: 3),
                   scrollDirection: Axis.horizontal,
                   itemCount: homeVM.hostRecommendedArr.length,
                   itemBuilder: (context, index) {
@@ -112,10 +103,8 @@ class _HomeViewState extends State<HomeView> {
             SizedBox(
               height: 160,
               child: ListView.builder(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 0,
-                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                   scrollDirection: Axis.horizontal,
                   itemCount: homeVM.playListArr.length,
                   itemBuilder: (context, index) {
@@ -135,22 +124,22 @@ class _HomeViewState extends State<HomeView> {
             ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 10,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 itemCount: homeVM.recentlyPlayedArr.length,
                 itemBuilder: (context, index) {
                   var sObj = homeVM.recentlyPlayedArr[index];
-                  return AllSongRow(
+                  return SongsRow(
                     sObj: sObj,
+                    onPressed: () {},
                     onPressedPlay: () {},
-                    onPressed: () {}, isWeb: true ,
                   );
-                }),
+                })
           ],
         ),
       ),
     );
   }
+}
+
+class SplashViewMode {
 }

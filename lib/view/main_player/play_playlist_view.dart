@@ -277,7 +277,7 @@ class _PlayPlayListViewState extends State<PlayPlayListView> {
                   itemBuilder: (context, index) {
                     var sObj = allVM.allList[index];
 
-                    return AllSongRow(
+                    return SongsRow(
                       sObj: sObj,
                       onPressed: () {},
                       onPressedPlay: () {

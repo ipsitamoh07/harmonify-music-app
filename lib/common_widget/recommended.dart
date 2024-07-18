@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../common/colors.dart';
+import 'package:harmonify1/common/colors.dart';
 
 class RecommendedCell extends StatelessWidget {
   final Map mObj;
@@ -10,12 +9,12 @@ class RecommendedCell extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 230,
-      margin: const EdgeInsets.symmetric(horizontal: 4),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(19),
+            borderRadius: BorderRadius.circular(9),
             child: Image.asset(
               mObj["image"],
               width: double.maxFinite,
@@ -23,29 +22,28 @@ class RecommendedCell extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(height: 10),
-          Text(
-                mObj["name"],
-                maxLines: 1,
-                style: TextStyle(
-                  color: TColor.primaryText60,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
 
-              Text(
-                mObj["artist"],
-                maxLines: 1,
-                style: TextStyle(
-                  color: TColor.secondaryText,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
+          const SizedBox(height: 15,),
+
+          Text(
+            mObj["name"],
+            maxLines: 1,
+            style: TextStyle(
+                color: TColor.primaryText60,
+                fontSize: 13,
+                fontWeight: FontWeight.w700),
+          ),
+
+          Text(
+            mObj["artists"],
+            maxLines: 1,
+            style: TextStyle(
+                color: TColor.secondaryText,
+                fontSize: 10,
+                fontWeight: FontWeight.w700),
+          )
         ],
       ),
     );
-    
   }
 }

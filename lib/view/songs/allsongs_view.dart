@@ -17,23 +17,22 @@ class _AllSongsViewState extends State<AllSongsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(() {
-        return ListView.builder(
-          padding: const EdgeInsets.all(20),
-          itemCount: allVM.allList.length,
-          itemBuilder: (context, index) {
-            var sObj = allVM.allList[index];
+      body: Obx(
+        () => ListView.builder(
+            padding: const EdgeInsets.all(20),
+            itemCount: allVM.allList.length,
+            itemBuilder: (context, index) {
+              var sObj = allVM.allList[index];
 
-            return AllSongRow(
-              sObj: sObj,
-              onPressed: () {},
-              onPressedPlay: () {
-                Get.to(() => const MainPlayerView());
-              },
-            );
-          },
-        );
-      }),
+              return SongsRow(
+                sObj: sObj,
+                onPressed: () {},
+                onPressedPlay: () {
+                  Get.to(() => const MainPlayerView());
+                },
+              );
+            }),
+      ),
     );
   }
 }
